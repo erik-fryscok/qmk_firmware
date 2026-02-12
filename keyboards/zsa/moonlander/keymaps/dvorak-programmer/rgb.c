@@ -31,15 +31,12 @@ void set_layer_color(int layer) {
       rgb_matrix_set_color(i, 0, 0, 0);
     } else {
       RGB rgb = hsv_to_rgb_with_value(hsv);
-      rgb_matrix_set_color(i, rgb.g, rgb.r, rgb.b);
+      rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
     }
   }
 }
 
 bool rgb_matrix_indicators_user(void) {
-  if (rawhid_state.rgb_control) {
-    return false;
-  }
   if (!keyboard_config.disable_layer_led) {
     switch (biton32(layer_state)) {
       case 0:

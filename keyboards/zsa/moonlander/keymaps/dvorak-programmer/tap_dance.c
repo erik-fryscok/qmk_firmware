@@ -61,7 +61,7 @@ static void td_bsls_pipe_doublepipe_reset(tap_dance_state_t *state, void *user_d
   dance_state[0].step = 0;
 }
 
-tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[TAP_DANCE_ACTIONS_COUNT] = {
   [TD_BSLS_PIPE_DOUBLEPIPE] = ACTION_TAP_DANCE_FN_ADVANCED(
     td_bsls_pipe_doublepipe_on,
     td_bsls_pipe_doublepipe_finished,

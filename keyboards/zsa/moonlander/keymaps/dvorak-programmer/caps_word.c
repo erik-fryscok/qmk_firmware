@@ -3,9 +3,9 @@
 bool caps_word_press_user(uint16_t keycode) {
   const uint8_t active_layer = get_highest_layer(layer_state | default_layer_state);
 
-  // In the Dvorak Programmer base layer, '-' lives on KC_QUOT (DP_MINS).
+  // In the Dvorak Programmer base layer, '-' lives on KC_QUOT.
   if (active_layer == DVORAK_DP) {
-    if (keycode == DP_MINS) {
+    if (keycode == KC_DV_MINS) {
       add_weak_mods(MOD_BIT(KC_LSFT));
       return true;
     }

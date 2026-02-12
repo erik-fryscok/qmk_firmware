@@ -186,6 +186,7 @@ enum df_index {
 
 enum tap_dance_codes {
   TD_BSLS_PIPE_DOUBLEPIPE,
+  TAP_DANCE_ACTIONS_COUNT,
 };
 
 enum layers {
@@ -199,3 +200,4 @@ enum layers {
 bool handle_dual_function(keyrecord_t *record, uint16_t tap_key, uint16_t hold_key);
 void process_macros(uint16_t keycode, keyrecord_t *record);
 extern combo_t key_combos[COMBO_COUNT];
+extern tap_dance_action_t tap_dance_actions[TAP_DANCE_ACTIONS_COUNT];
