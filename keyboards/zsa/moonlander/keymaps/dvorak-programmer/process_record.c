@@ -88,7 +88,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DF_QUOTE_DQUO:      return process_dual_function_key(keycode, record, KC_QUOTE, KC_DQUO);
     case DF_MINUS_UNDS:      return process_dual_function_key(keycode, record, KC_MINUS, KC_UNDS);
     case DF_DOT_COMMA:       return process_dual_function_key(keycode, record, KC_DOT, KC_COMMA);
-    case DF_SPACE_RAYCAST:   return process_dual_function_key(keycode, record, KC_SPACE, LALT(KC_SPACE));
+    case DF_SPACE_RAYCAST:   return process_dual_function_key(keycode, record, KC_SPACE, LGUI(KC_SPACE));
     case DF_ENTER_LGUIENTER: return process_dual_function_key(keycode, record, KC_ENTER, LGUI(KC_ENTER));
 
     // RGB
