@@ -11,27 +11,8 @@ bool caps_word_press_user(uint16_t keycode) {
     }
   }
 
-  // In the dual-function Dvorak layer, these custom keycodes should
-  // continue Caps Word similarly to the stock KC_MINS / KC_1..KC_0 rules.
-  if (active_layer == DVORAK_KC) {
-    switch (keycode) {
-      case DF_MINUS_UNDS:
-        add_weak_mods(MOD_BIT(KC_LSFT));
-        return true;
-
-      case DF_LBRC_7:
-      case DF_LCBR_5:
-      case DF_RCBR_3:
-      case DF_LPRN_1:
-      case DF_EQUAL_9:
-      case DF_ASTR_0:
-      case DF_RPRN_2:
-      case DF_PLUS_4:
-      case DF_RBRC_6:
-      case DF_EXLM_8:
-        return true;
-    }
-  }
+  // DF_* keys are consumed in process_record_user() before process_caps_word()
+  // runs, so their Caps Word behavior is handled in process_record.c.
 
   // Fall back to QMK's default Caps Word behavior.
   switch (keycode) {
