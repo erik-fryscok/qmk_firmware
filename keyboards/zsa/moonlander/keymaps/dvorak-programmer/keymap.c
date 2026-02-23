@@ -8,7 +8,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     CW_TOGG,        DP_A,           DP_O,           DP_E,           DP_U,           DP_I,           KC_BSPC,                                                                        KC_DELETE,      DP_D,           DP_H,           DP_T,           DP_N,           DP_S,           DP_BSLS,
     KC_ESCAPE,      DP_QUOT,   DP_Q,           DP_J,           DP_K,           DP_X,                                           DP_B,           DP_M,           DP_W,           DP_V,           DP_Z,           DP_MINS,
     LALT(LCTL(KC_SPACE)),KC_LEFT_SHIFT,  KC_LEFT_CTRL,   KC_LEFT_ALT,    KC_LEFT_GUI,    TO(NAVIGATION),                                                                                                MAC_MISSION_CONTROL,         KC_LEFT,    KC_RIGHT,    KC_UP,   KC_DOWN,  MAC_LOCK,
-    DF_SPACE_RAYCAST,    TT(SPECIAL),          KC_HYPR,                        KC_HYPR,        TT(SPECIAL),          DF_ENTER_LGUIENTER
+    DF_SPACE_RAYCAST,    TT(SPECIAL),          MAC_MISSION_CONTROL,                        KC_HYPR,        TT(SPECIAL),          DF_ENTER_LGUIENTER
   ),
   [SPECIAL] = LAYOUT_moonlander(
     LGUI(DP_COMM), LGUI(KC_UP),    KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,KC_MEDIA_PLAY_PAUSE,LGUI(DP_T),     LALT(LGUI(DP_I)),                                KC_NO,     KC_LEFT_SHIFT,  KC_HASH,        KC_COLN,        KC_DLR,         KC_PERC,        QK_BOOT,
