@@ -1,4 +1,5 @@
 #include "keymap.h"
+#include "keymap_extras/keymap_dvorak_programmer.h"
 
 #ifdef CAPS_WORD_ENABLE
 static void process_caps_word_dual_function(uint16_t keycode, keyrecord_t *record) {
@@ -90,6 +91,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DF_DOT_COMMA:       return process_dual_function_key(keycode, record, KC_DOT, KC_COMMA);
     case DF_SPACE_RAYCAST:   return process_dual_function_key(keycode, record, KC_SPACE, LGUI(KC_SPACE));
     case DF_ENTER_LGUIENTER: return process_dual_function_key(keycode, record, KC_ENTER, LGUI(KC_ENTER));
+
+    case DF_DP_DOT_COMMA:       return process_dual_function_key(keycode, record, DP_DOT, DP_COMM);
 
     // RGB
     case RGB_SLD:
