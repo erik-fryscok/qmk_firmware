@@ -16,7 +16,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LGUI(LSFT(DP_Z)),LGUI(DP_Z),    KC_LEFT,        KC_DOWN,        KC_RIGHT,       LGUI(DP_A),     KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_LEFT_ALT,    DP_4,           DP_5,           DP_6,           KC_PLUS,        KC_ASTR,
     LGUI(DP_S),     LGUI(LCTL(KC_SPACE)),LGUI(DP_N),     LGUI(DP_X),     LGUI(DP_C),    LGUI(DP_V),                                   KC_LEFT_GUI,    DP_1,           DP_2,           DP_3,           KC_MINUS,       KC_SLASH,
     LGUI(LSFT(DP_DOT)),KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, DP_0,           DF_DP_DOT_COMMA,   KC_EQUAL,       KC_LABK,        KC_RABK,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_MEH, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [NAVIGATION] = LAYOUT_moonlander(
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_F10,         KC_F11,         KC_F12,         KC_NO,          KC_NO,

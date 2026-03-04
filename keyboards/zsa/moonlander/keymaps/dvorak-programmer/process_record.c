@@ -55,7 +55,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
   switch (keycode) {
     // Macros are handled in process_macros(); consume the key event.
-    case MACRO_PASSWORD:
+    case MACRO_PASSWORD_DP:
+    case MACRO_PASSWORD_DV:
     case MACRO_LAYER_DVORAK_DP:
     case MACRO_LAYER_VALHEIM:
       return false;
