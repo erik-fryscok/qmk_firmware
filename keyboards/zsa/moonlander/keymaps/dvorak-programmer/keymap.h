@@ -197,7 +197,8 @@ enum layers {
   SPECIAL_DP,
   NAVIGATION,
   VALHEIM,
-  DVORAK_KC
+  DVORAK_KC,
+  SPECIAL_KC
 };
 
 bool handle_dual_function(keyrecord_t *record, uint16_t tap_key, uint16_t hold_key);
