@@ -194,7 +194,7 @@ enum tap_dance_codes {
 
 enum layers {
   DVORAK_DP,
-  SPECIAL,
+  SPECIAL_DP,
   NAVIGATION,
   VALHEIM,
   DVORAK_KC
