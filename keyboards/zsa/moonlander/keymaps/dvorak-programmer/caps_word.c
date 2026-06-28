@@ -3,11 +3,18 @@
 bool caps_word_press_user(uint16_t keycode) {
   const uint8_t active_layer = get_highest_layer(layer_state | default_layer_state);
 
-  // In the Dvorak Programmer base layer, '-' lives on KC_QUOT.
   if (active_layer == DVORAK_DP) {
-    if (keycode == KC_DV_MINS) {
-      add_weak_mods(MOD_BIT(KC_LSFT));
-      return true;
+    switch (keycode) {
+      // These Dvorak Programmer letters live on punctuation HID keycodes, so
+      // they are not covered by QMK's stock KC_A ... KC_Z Caps Word handling.
+      case KC_DV_S:
+      case KC_DV_W:
+      case KC_DV_V:
+      case KC_DV_Z:
+      // In the Dvorak Programmer base layer, '-' lives on KC_QUOT.
+      case KC_DV_MINS:
+        add_weak_mods(MOD_BIT(KC_LSFT));
+        return true;
     }
   }
 
