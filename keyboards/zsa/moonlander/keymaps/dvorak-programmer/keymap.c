@@ -7,7 +7,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,    DP_SCLN,    DP_COMM,    DP_DOT,   DP_P,           DP_Y,           LGUI(KC_LEFT),                                  RGUI(KC_RIGHT), DP_F,           DP_G,           DP_C,           DP_R,           DP_L,           DP_SLSH,
     CW_TOGG,        DP_A,           DP_O,           DP_E,           DP_U,           DP_I,           KC_BSPC,                                                                        KC_DELETE,      DP_D,           DP_H,           DP_T,           DP_N,           DP_S,           DP_BSLS,
     KC_ESCAPE,      DP_QUOT,   DP_Q,           DP_J,           DP_K,           DP_X,                                           DP_B,           DP_M,           DP_W,           DP_V,           DP_Z,           DP_MINS,
-    LALT(LCTL(KC_SPACE)),KC_LEFT_SHIFT,  KC_LEFT_CTRL,   KC_LEFT_ALT,    KC_LEFT_GUI,    TO(NAVIGATION),                                                                                                MAC_MISSION_CONTROL,         KC_LEFT,    KC_RIGHT,    KC_UP,   KC_DOWN,  MAC_LOCK,
+    LALT(LCTL(KC_SPACE)),KC_LEFT_SHIFT,  KC_LEFT_CTRL,   KC_LEFT_ALT,    KC_LEFT_GUI,    TO(NAVIGATION),                                                                                                TO(DVORAK_KC),         KC_LEFT,    KC_RIGHT,    KC_UP,   KC_DOWN,  MAC_LOCK,
     DF_SPACE_RAYCAST,    TT(SPECIAL_DP),          MAC_MISSION_CONTROL,                        KC_HYPR,        TT(SPECIAL_DP),          DF_ENTER_LGUIENTER
   ),
   [SPECIAL_DP] = LAYOUT_moonlander(
@@ -45,8 +45,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [SPECIAL_KC] = LAYOUT_moonlander(
     LGUI(DP_COMM), LGUI(KC_UP),    KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,KC_MEDIA_PLAY_PAUSE,LGUI(DP_T),     LALT(LGUI(DP_I)),                                KC_NO,     KC_LEFT_SHIFT,  KC_HASH,        KC_COLN,        KC_DLR,         KC_PERC,        QK_BOOT,
     LALT(LGUI(KC_ESCAPE)),LGUI(DP_Q),     LGUI(DP_W),     KC_UP,          LGUI(DP_DLR), LCTL(LSFT(DP_C)),LALT(KC_LEFT),                                  LALT(KC_RIGHT), KC_LEFT_CTRL,   KC_7,           KC_8,           KC_9,           KC_LPRN,        KC_RPRN,
-    LGUI(LSFT(DP_Z)),LGUI(DP_Z),    KC_LEFT,        KC_DOWN,        KC_RIGHT,       LGUI(DP_A),     KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_LEFT_ALT,    KC_4,           KC_5,           KC_6,           KC_PLUS,        KC_ASTR,
-    LGUI(DP_S),     LGUI(LCTL(KC_SPACE)),LGUI(DP_N),     LGUI(DP_X),     LGUI(DP_C),    LGUI(DP_V),                                   KC_LEFT_GUI,    KC_1,           KC_2,           KC_3,           KC_MINUS,       KC_SLASH,
+    LCTL(KC_Y),LCTL(KC_Z),    KC_LEFT,        KC_DOWN,        KC_RIGHT,       LCTL(KC_A),     KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_LEFT_ALT,    KC_4,           KC_5,           KC_6,           KC_PLUS,        KC_ASTR,
+    LCTL(KC_S),     LGUI(LCTL(KC_SPACE)),LGUI(DP_N),     LCTL(KC_X),     LCTL(KC_C),    LCTL(KC_V),                                   KC_LEFT_GUI,    KC_1,           KC_2,           KC_3,           KC_MINUS,       KC_SLASH,
     LGUI(LSFT(DP_DOT)),KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_0,           DF_DP_DOT_COMMA,   KC_EQUAL,       KC_LABK,        KC_RABK,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_MEH, KC_TRANSPARENT, KC_TRANSPARENT
   )
