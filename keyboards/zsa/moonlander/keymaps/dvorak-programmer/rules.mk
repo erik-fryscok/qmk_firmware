@@ -8,4 +8,7 @@ TAP_DANCE_ENABLE = yes
 SPACE_CADET_ENABLE = no
 CAPS_WORD_ENABLE = yes
 COMBO_ENABLE = yes
+STENO_ENABLE = yes
+STENO_PROTOCOL = geminipr
+KEYBOARD_SHARED_EP = yes
 SRC += dual_function.c tap_dance.c combos.c rgb.c tapping_term.c process_record.c macros.c caps_word.c
