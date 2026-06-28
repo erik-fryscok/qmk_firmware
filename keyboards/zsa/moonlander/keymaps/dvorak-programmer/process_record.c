@@ -2,49 +2,18 @@
 #include "keymap_extras/keymap_dvorak_programmer.h"
 
 #ifdef CAPS_WORD_ENABLE
-static void process_caps_word_dual_function(uint16_t keycode, keyrecord_t *record) {
-  if (!is_caps_word_on() || !record->event.pressed) {
-    return;
-  }
-
-  switch (keycode) {
-    // Mirrors KC_MINS behavior in the stock Caps Word handler.
-    case DF_MINUS_UNDS:
-      return;
-
-    // These keys are symbol on tap, digit on hold.
-    // Keep Caps Word for hold (digits), stop on tap (symbols).
-    case DF_LBRC_7:
-    case DF_LCBR_5:
-    case DF_RCBR_3:
-    case DF_LPRN_1:
-    case DF_EQUAL_9:
-    case DF_ASTR_0:
-    case DF_RPRN_2:
-    case DF_PLUS_4:
-    case DF_RBRC_6:
-    case DF_EXLM_8:
-      if (record->tap.count > 0) {
-        caps_word_off();
-      }
-      return;
-
-    default:
-      caps_word_off();
-      return;
+static void process_caps_word_dual_function(keyrecord_t *record) {
+  if (is_caps_word_on() && record->event.pressed) {
+    caps_word_off();
   }
 }
 #endif
 
 static bool process_dual_function_key(uint16_t keycode, keyrecord_t *record, uint16_t tap_key, uint16_t hold_key) {
-#ifdef CAPS_WORD_ENABLE
-  process_caps_word_dual_function(keycode, record);
-
-  if (keycode == DF_MINUS_UNDS && is_caps_word_on()) {
-    tap_key = KC_UNDS;
-  }
-#else
   (void)keycode;
+
+#ifdef CAPS_WORD_ENABLE
+  process_caps_word_dual_function(record);
 #endif
 
   return handle_dual_function(record, tap_key, hold_key);
